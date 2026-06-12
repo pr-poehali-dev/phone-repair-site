@@ -6,7 +6,8 @@ const BG_IMAGE = "https://cdn.poehali.dev/projects/9b0453e4-1d7f-4199-a452-b2c15
 
 const PHONE = "+79817540406";
 const WA_LINK = `https://wa.me/${PHONE.replace("+", "")}`;
-const TG_LINK = `https://t.me/+${PHONE.replace("+", "")}`;
+const EMAIL = "mobileacsess@yandex.ru";
+const MAIL_LINK = `mailto:${EMAIL}`;
 
 const SERVICES = [
   { icon: "Smartphone", title: "Ремонт телефонов", desc: "Замена экрана, аккумулятора, камеры, платы. Работаем со всеми брендами.", price: "от 1 200 ₽" },
@@ -41,7 +42,7 @@ export default function Index() {
     const text = encodeURIComponent(
       `Заявка с сайта MobileAccess\nИмя: ${diagForm.name}\nТелефон: ${diagForm.phone}\nУстройство: ${diagForm.device}\nПроблема: ${diagForm.problem}`
     );
-    window.open(`https://wa.me/79817540406?text=${text}`, "_blank");
+    window.location.href = `${MAIL_LINK}?subject=Заявка на диагностику от ${diagForm.name}&body=${text}`;
     setDiagSent(true);
   };
 
@@ -254,7 +255,7 @@ export default function Index() {
               ОНЛАЙН-<span className="neon-text-red">ДИАГНОСТИКА</span>
             </h2>
             <p className="text-muted-foreground mt-4 text-base">
-              Заявка придёт напрямую Максу в WhatsApp — ответит в течение 15 минут
+              Заявка придёт на почту mobileacsess@yandex.ru — ответим в течение 15 минут
             </p>
           </div>
 
@@ -264,15 +265,15 @@ export default function Index() {
                 <Icon name="CheckCircle" size={32} className="text-green-400" />
               </div>
               <h3 className="font-display text-2xl font-bold mb-3">Заявка отправлена!</h3>
-              <p className="text-muted-foreground">Макс получил вашу заявку в WhatsApp и свяжется в течение 15 минут.</p>
+              <p className="text-muted-foreground">Письмо открыто в вашей почте. Мы ответим на mobileacsess@yandex.ru в течение 15 минут.</p>
               <div className="flex gap-4 justify-center mt-6">
-                <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-neon px-6 py-3 rounded-xl text-sm font-bold text-white flex items-center gap-2">
-                  <Icon name="MessageCircle" size={16} />
-                  Написать в WhatsApp
+                <a href={MAIL_LINK} className="btn-neon px-6 py-3 rounded-xl text-sm font-bold text-white flex items-center gap-2">
+                  <Icon name="Mail" size={16} />
+                  Написать на почту
                 </a>
-                <a href={TG_LINK} target="_blank" rel="noreferrer" className="btn-ghost-neon px-6 py-3 rounded-xl text-sm flex items-center gap-2">
-                  <Icon name="Send" size={16} />
-                  Telegram
+                <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-ghost-neon px-6 py-3 rounded-xl text-sm flex items-center gap-2">
+                  <Icon name="MessageCircle" size={16} />
+                  WhatsApp
                 </a>
               </div>
             </div>
@@ -329,15 +330,15 @@ export default function Index() {
               </div>
 
               <button type="submit" className="btn-neon w-full py-4 rounded-2xl text-base font-bold text-white flex items-center justify-center gap-2">
-                <Icon name="MessageCircle" size={18} />
-                Отправить в WhatsApp Максу
+                <Icon name="Mail" size={18} />
+                Отправить заявку на почту
               </button>
 
               <div className="flex items-center justify-center gap-3">
                 <span className="text-xs text-muted-foreground/60">или напишите напрямую:</span>
-                <a href={WA_LINK} target="_blank" rel="noreferrer" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">WhatsApp</a>
+                <a href={MAIL_LINK} className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">mobileacsess@yandex.ru</a>
                 <span className="text-muted-foreground/30">|</span>
-                <a href={TG_LINK} target="_blank" rel="noreferrer" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">Telegram</a>
+                <a href={WA_LINK} target="_blank" rel="noreferrer" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">WhatsApp</a>
               </div>
             </form>
           )}
@@ -407,10 +408,10 @@ export default function Index() {
             {[
               { icon: "Phone", label: "Телефон", val: "+7 (981) 754-04-06", sub: "Звоните с 10:00 до 21:00", href: "tel:+79817540406" },
               { icon: "MessageCircle", label: "WhatsApp", val: "+7 (981) 754-04-06", sub: "Ответим за 15 минут", href: WA_LINK },
-              { icon: "Send", label: "Telegram", val: "@Max", sub: "Напишите в Telegram", href: TG_LINK },
+              { icon: "Mail", label: "E-mail", val: "mobileacsess@yandex.ru", sub: "Для заявок и обращений", href: MAIL_LINK },
               { icon: "MapPin", label: "Адрес", val: "Красное село, ул. Ленина 51", sub: "1 этаж, павильон 1.13", href: "https://yandex.ru/maps/?text=Красное+село+Ленина+51" },
               { icon: "Clock", label: "Режим работы", val: "Пн–Вс: 10:00–21:00", sub: "Без выходных", href: null },
-              { icon: "Mail", label: "E-mail", val: "mabileacsess@yandex.ru", sub: "Для официальных обращений", href: "mailto:mabileacsess@yandex.ru" },
+              { icon: "Star", label: "Рейтинг", val: "5.0 / 5 ★", sub: "Довольные клиенты", href: null },
             ].map((item, i) => (
               <a
                 key={i}
@@ -482,7 +483,7 @@ export default function Index() {
             </span>
           </div>
           <div className="text-xs text-center" style={{ color: "rgba(255,255,255,0.3)" }}>
-            © 2024 MobileAccess · Красное село, Ленина 51, пав. 1.13 · mabileacsess@yandex.ru
+            © 2024 MobileAccess · Красное село, Ленина 51, пав. 1.13 · mobileacsess@yandex.ru
           </div>
           <div className="flex gap-5">
             {[["home", "Главная"], ["services", "Услуги"], ["contacts", "Контакты"]].map(([id, label]) => (
