@@ -21,8 +21,8 @@ const SERVICES = [
 const BRANDS = ["Apple", "Samsung", "Xiaomi", "Huawei", "OPPO", "Lenovo", "Asus", "Acer", "Apple", "Samsung", "Xiaomi", "Huawei", "OPPO", "Lenovo", "Asus", "Acer"];
 
 const STEPS = [
-  { num: "01", title: "Заявка онлайн", desc: "Заполните форму или напишите в WhatsApp / Telegram" },
-  { num: "02", title: "Оценка мастера", desc: "Max перезвонит в течение 15 минут и назовёт стоимость" },
+  { num: "01", title: "Заявка онлайн", desc: "Заполните форму или напишите в WhatsApp / на почту" },
+  { num: "02", title: "Оценка мастера", desc: "Перезвоним в течение 15 минут и назовём стоимость" },
   { num: "03", title: "Ремонт", desc: "Работаем быстро: большинство поломок — в день обращения" },
   { num: "04", title: "Готово!", desc: "Проверяем перед выдачей и даём письменную гарантию" },
 ];
