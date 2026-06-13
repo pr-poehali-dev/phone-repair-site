@@ -5,7 +5,7 @@ const HERO_IMAGE = "https://cdn.poehali.dev/projects/9b0453e4-1d7f-4199-a452-b2c
 const BG_IMAGE = "https://cdn.poehali.dev/projects/9b0453e4-1d7f-4199-a452-b2c1561a43b2/files/64dcba1f-5d3a-4028-b7af-8626a67807ba.jpg";
 
 const PHONE = "+79817540406";
-const WA_LINK = `https://wa.me/${PHONE.replace("+", "")}`;
+const MAX_LINK = "https://web.max.ru/112301058";
 const EMAIL = "mobileacsess@yandex.ru";
 const MAIL_LINK = `mailto:${EMAIL}`;
 
@@ -138,13 +138,13 @@ export default function Index() {
                 Бесплатная диагностика
               </button>
               <a
-                href={WA_LINK}
+                href={MAX_LINK}
                 target="_blank"
                 rel="noreferrer"
                 className="btn-ghost-neon px-8 py-4 rounded-2xl text-base flex items-center gap-2"
               >
                 <Icon name="MessageCircle" size={18} />
-                WhatsApp
+                Написать в MAX
               </a>
             </div>
 
@@ -271,9 +271,9 @@ export default function Index() {
                   <Icon name="Mail" size={16} />
                   Написать на почту
                 </a>
-                <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-ghost-neon px-6 py-3 rounded-xl text-sm flex items-center gap-2">
+                <a href={MAX_LINK} target="_blank" rel="noreferrer" className="btn-ghost-neon px-6 py-3 rounded-xl text-sm flex items-center gap-2">
                   <Icon name="MessageCircle" size={16} />
-                  WhatsApp
+                  Написать в MAX
                 </a>
               </div>
             </div>
@@ -338,7 +338,7 @@ export default function Index() {
                 <span className="text-xs text-muted-foreground/60">или напишите напрямую:</span>
                 <a href={MAIL_LINK} className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">mobileacsess@yandex.ru</a>
                 <span className="text-muted-foreground/30">|</span>
-                <a href={WA_LINK} target="_blank" rel="noreferrer" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">WhatsApp</a>
+                <a href={MAX_LINK} target="_blank" rel="noreferrer" className="text-xs text-red-400 hover:text-red-300 transition-colors font-medium">MAX</a>
               </div>
             </form>
           )}
@@ -407,7 +407,7 @@ export default function Index() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: "Phone", label: "Телефон", val: "+7 (981) 754-04-06", sub: "Звоните с 10:00 до 21:00", href: "tel:+79817540406" },
-              { icon: "MessageCircle", label: "WhatsApp", val: "+7 (981) 754-04-06", sub: "Ответим за 15 минут", href: WA_LINK },
+              { icon: "MessageCircle", label: "Мессенджер MAX", val: "Написать в MAX", sub: "Ответим за 15 минут", href: MAX_LINK },
               { icon: "Mail", label: "E-mail", val: "mobileacsess@yandex.ru", sub: "Для заявок и обращений", href: MAIL_LINK },
               { icon: "MapPin", label: "Адрес", val: "Красное село, ул. Ленина 51", sub: "1 этаж, павильон 1.13", href: "https://yandex.ru/maps/?text=Красное+село+Ленина+51" },
               { icon: "Clock", label: "Режим работы", val: "Пн–Вс: 10:00–21:00", sub: "Без выходных", href: null },
@@ -457,13 +457,13 @@ export default function Index() {
                   Оставить заявку
                 </button>
                 <a
-                  href={WA_LINK}
+                  href={MAX_LINK}
                   target="_blank"
                   rel="noreferrer"
                   className="btn-ghost-neon px-10 py-4 rounded-2xl text-base inline-flex items-center gap-2"
                 >
                   <Icon name="MessageCircle" size={18} />
-                  WhatsApp
+                  Написать в MAX
                 </a>
               </div>
             </div>
