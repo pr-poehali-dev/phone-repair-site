@@ -355,7 +355,7 @@ export default function Index() {
               MobileAccess — сервисный центр в Красном селе. Мы ремонтируем телефоны, планшеты и ноутбуки любой сложности. Работаем только с сертифицированными компонентами и даём гарантию на все виды работ.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10 text-base">
-              Специализируемся на снятии блокировок iCloud, Google и FRP. Приходите лично или оставьте заявку онлайн — Макс ответит в течение 15 минут.
+              Специализируемся на снятии блокировок iCloud, Google и FRP. Приходите лично или оставьте заявку онлайн — ответим в течение 15 минут.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
@@ -446,7 +446,7 @@ export default function Index() {
                 <span className="neon-text-red">МЫ ПОЧИНИМ!</span>
               </h2>
               <p className="text-muted-foreground mb-8 text-base max-w-md mx-auto">
-                Приходите в Красное село, ул. Ленина 51, пав. 1.13 или оставьте заявку — Макс ответит в течение 15 минут
+                Приходите в Красное село, ул. Ленина 51, пав. 1.13 или оставьте заявку — ответим в течение 15 минут
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <button
